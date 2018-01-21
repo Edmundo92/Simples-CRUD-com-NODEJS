@@ -1,0 +1,13 @@
+modulo.js
+
+    var teste = function(){
+        console.log("Curso de node js");
+    }
+
+    module.exports = teste;
+
+index.js
+
+    var modulo = require("./modulo");
+    console.log(modulo.teste());
+

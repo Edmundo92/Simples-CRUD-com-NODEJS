@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Introdução ao Node JS</title>
+    </head>
+    <body>
+        <h1>Página de Home 4</h1>
+
+        <ul>
+            <% for(var chave in clientes){ %>
+                <li><%= clientes[chave].nome %> - <%= clientes[chave].email %></li>
+            <% } %>
+        </ul>
+        <br>
+
+        <% if(erros){ %>
+            <% for(var chave in erros){ %>
+            <ul>
+                <li> <%= erros[chave].msg %> </li>
+            </ul>
+            <% } %>
+        <% } %>
+   
+        <form action="/" method="post">
+            <input type="text" name="nome" placeholder="Digite o nome" value="<%= dados.nome %>">
+            <input type="text" name="email" placeholder="Digite o email" value="<%= dados.email %>">
+            <button>Adicionar</button>
+        </form>
+
+    </body>
+</html>
